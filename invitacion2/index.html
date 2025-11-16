@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Asmed & Mayerly | Invitación Elegante</title>
+    
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Librería de Animación (AOS) --><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        // Configuración de Tailwind para usar los colores Marsala y las fuentes de lujo
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'marsala': '#56070c', // VINO OSCURO (Nuevo color solicitado)
+                        'gold-elegant': '#C8AA6E', // Dorado Elegante
+                        'cream-bg': '#fdf6ec', // Beige/Crema Suave (Fondo)
+                        'text-dark': '#1a1a1a', // Negro sutil para mayor elegancia
+                        'accent-green': '#337a54', // Verde para botones de mapa/whatsapp
+                    },
+                    fontFamily: {
+                        'script': ['Great Vibes', 'cursive'], // Para nombres (Asmed & Mayerly) y citas
+                        'display': ['Playfair Display', 'serif'], // Para títulos de sección, fechas y encabezados
+                        'serif-body': ['Cormorant Garamond', 'serif'], // Para cuerpo de texto, detalles
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Importación de Fuentes para el Estilo Marsala */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap');
+        
+        /* Estilos base */
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #fdf6ec; /* cream-bg */
+            color: #1a1a1a; /* text-dark */
+            line-height: 1.6; /* Mejora la legibilidad del cuerpo de texto */
+        }
+
+        /* Estilo del divisor dorado exacto */
+        .divider {
+            width: 80px; /* Un poco más ancho para mayor presencia */
+            height: 1.5px; /* Un poco más grueso */
+            background-color: #C8AA6E; /* gold-elegant */
+            margin: 15px auto 40px; /* Más espacio */
+        }
+
+        /* 1. SECCIÓN DE PORTADA */
+        .seccion-portada {
+            background-image: url('portada.png'); 
+            background-size: cover;
+            background-position: center 30%; 
+            height: 100vh;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex; /* Asegura el centrado vertical y horizontal */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .portada-contenido {
+            max-width: 90%; /* Ajuste para pantallas pequeñas */
+            padding: 2.5rem 1.5rem; /* Más padding */
+            background-color: rgba(0, 0, 0, 0.55); /* Un poco más oscuro para mejor contraste de texto */
+        }
+
+        /* 3. SECCIÓN DE FOTOS (GALERÍA) */
+        .galeria-item {
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px; /* Bordes un poco más suaves */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Sombra más pronunciada */
+            overflow: hidden;
+            height: 400px; /* Altura más grande */
+            transition: transform 0.3s ease-in-out; /* Animación al pasar el ratón */
+        }
+        .galeria-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Placeholders de las dos fotos restantes */
+        .foto-galeria-1 {
+            background-image: url('invitacion2.png');
+        }
+
+        .foto-galeria-2 {
+            background-image: url('invitacion3.png');
+        }
+
+        /* Botón de música flotante */
+        .music-player {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+        .music-btn {
+            background-color: #56070c; /* Nuevo Marsala */
+            color: #fdf6ec;
+            border-radius: 9999px;
+            padding: 15px; /* Botón más grande */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            font-size: 1.2rem; /* Icono más grande */
+        }
+        .music-btn:hover {
+            background-color: #C8AA6E;
+            color: #56070c;
+            transform: scale(1.1);
+        }
+
+        /* Ajustes para bloques de evento (centrado de iconos) */
+        .bloque-evento .fas {
+            float: none; /* Desactivar float para centrado en bloque */
+            display: block;
+            margin: 0 auto 10px; /* Centra el icono y añade margen inferior */
+            color: #C8AA6E; /* Color dorado para los iconos para un toque más elegante */
+        }
+        .bloque-evento {
+            text-align: center; /* Centrar todo el contenido del bloque */
+            padding: 2rem; /* Más padding */
+            border-left: none; /* Quitar borde lateral */
+            border-bottom: 3px solid #C8AA6E; /* Borde inferior elegante */
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .bloque-evento:hover {
+            background-color: #fffaf5; /* Fondo más suave al pasar el ratón */
+        }
+        .bloque-evento p.ml-12, .bloque-evento a.ml-12 {
+            margin-left: 0; /* Anular margen izquierdo para centrado */
+            display: block; /* Asegurar que los elementos de texto ocupen su propio espacio */
+            margin-bottom: 10px; /* Espacio entre los elementos de texto */
+        }
+        .bloque-evento a {
+            margin-top: 15px; /* Más espacio para el botón */
+            padding: 12px 25px; /* Botones más grandes */
+            font-size: 0.9rem;
+        }
+
+        /* Ajustes para bloques de info (vestimenta/fe) */
+        .bloque-info {
+            background-color: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+        }
+
+        /* RSVP Final */
+        .bloque-rsvp {
+            background-color: #56070c; /* Nuevo Marsala */
+            padding: 3rem 2rem;
+        }
+        .bloque-rsvp .subtitulo {
+            border-bottom-width: 2px; /* Borde más grueso */
+        }
+        .bloque-rsvp .detalle-principal {
+            font-size: 2.5rem; /* Fecha límite más grande */
+            line-height: 1.2;
+        }
+        /* Clase añadida para unificar el párrafo de RSVP */
+        .rsvp-instruction {
+            font-family: 'Cormorant Garamond', serif; /* Asegura un tipo de letra unificado */
+            font-size: 1.2rem;
+            line-height: 1.5;
+            max-width: 80%;
+            margin: 0 auto 1.5rem;
+            color: #e5e5e5; /* Color claro para contraste */
+            font-style: italic;
+        }
+
+        /* Estilos para la línea curva SVG */
+        .curved-line {
+            display: block;
+            width: 100%;
+            height: auto;
+            transform: translateY(1px); /* Ajuste para eliminar el pequeño espacio blanco */
+        }
+        .curved-line-inverted {
+             /* La inversión se maneja en el atributo transform del SVG en el HTML */
+             transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- REPRODUCTOR DE MÚSICA (Fijo en la esquina) --><div class="music-player">
+        <button class="music-btn" id="musicButton"><i class="fas fa-music"></i></button>
+        <audio id="weddingSong" loop>
+            <source src="cancion.mp3" type="audio/mpeg"> 
+            <!-- NOTA: Reemplaza con una URL de tu canción de boda accesible --></audio>
+    </div>
+
+    <!-- 1. SECCIÓN DE PORTADA (Header con Fondo Profesional) --><header class="seccion-portada">
+        <div class="portada-contenido text-center text-white rounded-lg" data-aos="fade-in" data-aos-duration="2000">
+            <h2 data-aos="fade-up" data-aos-duration="1200" class="text-2xl sm:text-3xl font-display font-light tracking-widest mb-4">NUESTRA BODA</h2>
+            <h1 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="300" class="text-7xl sm:text-9xl font-script text-gold-elegant mb-4">Asmed & Mayerly</h1>
+            <h3 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" class="text-xl sm:text-2xl font-display font-light tracking-wide mt-6">JUEVES 19 DE DICIEMBRE, 2025</h3>
+            
+            <button id="scroll-btn" class="bg-transparent border-2 border-gold-elegant text-gold-elegant px-8 py-3 rounded-full mt-10 text-lg font-semibold transition hover:bg-gold-elegant hover:text-marsala flex items-center mx-auto" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+                <i class="fas fa-chevron-down mr-3 text-xl"></i> DESCUBRE LA INVITACIÓN
+            </button>
+        </div>
+    </header>
+
+    <!-- Línea de Separación Curva (Parte superior, Marsala) --><svg class="curved-line bg-cream-bg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <!-- Relleno con el color de vino oscuro --><path d="M0,30 C300,100 700,0 1000,30 L1000,100 L0,100 Z" fill="#56070c"></path>
+    </svg>
+
+    <!-- 2. SECCIÓN DE BIENVENIDA Y CRONÓMETRO --><section class="seccion-bienvenida py-20 px-4 text-center bg-cream-bg">
+        <div class="max-w-4xl mx-auto bg-white p-10 sm:p-14 rounded-xl shadow-lg">
+            
+            <div class="header-tarjeta" data-aos="fade-down">
+                <h2 class="subtitulo text-3xl font-display font-semibold text-marsala">¡ES UN PLACER INVITARTE!</h2>
+                <div class="divider"></div>
+            </div>
+
+            <p class="cita text-2xl italic font-script text-text-dark mb-10" data-aos="fade-up" data-aos-delay="200">
+                "Porque la felicidad es más grande cuando se comparte, deseamos que nos acompañes en el día en que unimos nuestras vidas en matrimonio."
+            </p>
+
+            <!-- CRONÓMETRO ELEGANTEMENTE DESTACADO --><div class="max-w-lg mx-auto p-8 border border-gold-elegant rounded-lg shadow-inner bg-cream-bg" data-aos="zoom-in" data-aos-delay="400">
+                <h3 class="countdown-titulo text-xl font-display text-marsala mb-5">FALTAN SÓLO:</h3>
+                <div id="countdown" class="countdown-unidades flex justify-around text-5xl font-bold text-text-dark">
+                    <div class="time-unit" id="days">--<span class="block text-marsala text-lg font-normal mt-2">Días</span></div>
+                    <div class="time-unit" id="hours">--<span class="block text-marsala text-lg font-normal mt-2">Horas</span></div>
+                    <div class="time-unit" id="minutes">--<span class="block text-marsala text-lg font-normal mt-2">Minutos</span></div>
+                    <div class="time-unit" id="seconds">--<span class="block text-marsala text-lg font-normal mt-2">Segundos</span></div>
+                </div>
+            </div>
+            
+            <p data-aos="fade-up" data-aos-delay="500" class="mensaje-fecha text-2xl font-display mt-10 text-marsala">
+                El Viernes 19 de Diciembre
+            </p>
+        </div>
+    </section>
+
+    <!-- Línea de Separación Curva (White, entre Bienvenida y Galería) --><svg class="curved-line curved-line-inverted bg-cream-bg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <!-- Relleno con el color de la sección de galería (blanco) --><path d="M0,70 C300,0 700,100 1000,70 L1000,0 L0,0 Z" fill="#FFFFFF"></path>
+    </svg>
+
+    <!-- 3. SECCIÓN DE FOTOS (Galería - 2 Fotos) --><section class="seccion-galeria py-16 px-4 text-center bg-white">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="galeria-item foto-galeria-1" data-aos="fade-right">
+                <!-- Foto 1 de la Galería --></div>
+            <div class="galeria-item foto-galeria-2" data-aos="fade-left" data-aos-delay="300">
+                <!-- Foto 2 de la Galería --></div>
+        </div>
+    </section>
+
+    <!-- Separador Curvo Marsala (Entre Galería y Ubicación) -->
+    <svg viewBox="0 0 1000 50" preserveAspectRatio="none" class="w-full h-auto block" style="transform: translateY(1px); background-color: white;">
+        <path d="M0,50 C250,0 750,50 1000,0 L1000,50 L0,50 Z" fill="#56070c"></path>
+    </svg>
+
+    <!-- 4. SECCIÓN DE UBICACIÓN Y HORARIOS --><section class="py-20 px-4 text-center bg-cream-bg">
+        <div class="max-w-4xl mx-auto bg-white p-10 sm:p-14 rounded-xl shadow-lg">
+            <h2 class="subtitulo text-3xl font-display font-semibold text-marsala" data-aos="fade-up">DÓNDE Y CUÁNDO</h2>
+            <div class="divider"></div>
+
+            <!-- CEREMONIA --><div class="bloque-evento mb-12" data-aos="fade-right" data-aos-delay="200">
+                <i class="fas fa-church text-4xl"></i>
+                <h3 class="titulo-evento text-2xl font-display text-marsala font-semibold mb-2 mt-4">CEREMONIA</h3>
+                <p class="text-base text-gray-700">Hora: 7:30 PM (19:30 hrs)</p>
+                <p class="text-base text-gray-700">Iglesia Antioquia, Pje Sibaya 16</p>
+                <a href="https://maps.app.goo.gl/53j8LDcp9idiMVgQ8" class="inline-flex bg-accent-green text-white px-6 py-3 rounded-full font-medium mt-6 transition hover:bg-green-600" target="_blank">
+                    <i class="fas fa-map-marker-alt mr-2"></i> VER UBICACIÓN
+                </a>
+            </div>
+            
+            <!-- RECEPCIÓN --><div class="bloque-evento mb-0" data-aos="fade-left" data-aos-delay="400">
+                <i class="fas fa-glass-cheers text-4xl"></i>
+                <h3 class="titulo-evento text-2xl font-display text-marsala font-semibold mb-2 mt-4">RECEPCIÓN Y CENA</h3>
+                <p class="text-base text-gray-700">Hora: 10:00 PM (22:00 hrs)</p>
+                <p class="text-base text-gray-700">Lugar de la Recepción (Por definir)</p>
+                <a href="https://maps.app.goo.gl/Q9LDay81qW3L2dPi9?g_st=aw" class="inline-flex bg-gold-elegant text-white px-6 py-3 rounded-full font-medium mt-6 transition hover:bg-[#e0b848] text-marsala" target="_blank">
+                    <i class="fas fa-map-marker-alt mr-2"></i> VER UBICACIÓN
+                </a>
+            </div>
+            
+            <!-- La sección CARAVANA DE FOTOS ha sido eliminada. -->
+        </div>
+    </section>
+
+    <!-- Separador Curvo Marsala Invertido (Entre Ubicación y Detalles) -->
+    <div class="h-16 w-full bg-cream-bg relative overflow-hidden" data-aos="zoom-in" data-aos-duration="1000">
+        <svg viewBox="0 0 1000 100" preserveAspectRatio="none" class="w-full h-full absolute top-0">
+            <path d="M0,0 C250,100 750,0 1000,100 L1000,0 L0,0 Z" fill="#56070c"></path>
+        </svg>
+    </div>
+
+    <!-- 5. SECCIÓN DE DETALLES Y RSVP --><section class="seccion-detalles-rsvp py-20 px-4 text-center bg-[#fff9f0]">
+        <div class="max-w-4xl mx-auto bg-white p-10 sm:p-14 rounded-xl shadow-lg">
+            
+            <!-- VESTIMENTA --><div class="bloque-info p-6 mb-12" data-aos="fade-down">
+                <h2 class="subtitulo text-2xl font-display font-semibold text-marsala mb-4">VESTIMENTA</h2>
+                <p class="detalle-principal font-display text-4xl font-bold text-marsala mb-3">**FORMAL**</p>
+                <!-- Eliminado: <p class="text-lg text-gray-700 font-serif-body">Ellos: Traje Formal | Ellas: Vestido Largo</p> -->
+            </div>
+
+            <!-- NUESTRA FE / VERSÍCULO --><div class="bloque-info p-6 mb-12" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="subtitulo text-2xl font-display font-semibold text-marsala mb-4">NUESTRA FE</h2>
+                <!-- Versículo actualizado --><p class="detalle-principal font-script text-3xl italic text-marsala mb-3 leading-snug">
+                    "Y si alguno prevaleciere contra uno, dos le resistirán; y cordón de tres dobleces no se rompe pronto"
+                </p>
+                <p class="text-lg text-gray-700 font-serif-body">Eclesiastés 4:12</p>
+            </div>
+            
+            <!-- RSVP FINAL (Doble Botón y Texto Unificado) --><div class="bloque-rsvp text-white p-10 rounded-xl shadow-2xl mt-16" data-aos="zoom-in" data-aos-delay="400">
+                <h2 class="subtitulo text-3xl font-display font-semibold text-white border-b-2 border-gold-elegant pb-5 mb-6">CONFIRMA TU ASISTENCIA</h2>
+                
+                <!-- Texto de Confirmación Unificado en un solo párrafo --><p class="rsvp-instruction text-xl italic font-serif-body text-gray-200 mb-6">
+                    Confirmar tu asistencia es de suma importancia para que cada detalle que planeamos salga como lo esperamos.
+                </p>
+
+                <p class="detalle-principal font-display text-4xl font-bold text-gold-elegant mb-10">Avísanos antes del 1 de DICIEMBRE 2025</p>
+                
+                <!-- Doble Botón de Respuesta --><div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                    <a href="https://wa.me/+56976425245" class="inline-flex items-center bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-lg transition hover:bg-green-600 shadow-md" target="_blank">
+                        <i class="fab fa-whatsapp mr-3 text-xl"></i> CONFIRMAR CON ASMED
+                    </a>
+                    <a href="https://wa.me/+56954858372" class="inline-flex items-center bg-gold-elegant text-marsala px-8 py-4 rounded-full font-bold text-lg transition hover:bg-[#e0b848] hover:text-white shadow-md" target="_blank">
+                        <i class="fab fa-whatsapp mr-3 text-xl"></i> CONFIRMAR CON MAYERLY
+                    </a>
+                </div>
+
+            </div>
+            
+            <p class="footer-nota text-gray-500 mt-12 italic text-lg font-serif-body">¡Gracias por ser parte de nuestra historia!</p>
+        </div>
+    </section>
+
+    <!-- SCRIPTS --><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000, 
+                once: true 
+            });
+
+            const musicButton = document.getElementById('musicButton');
+            const weddingSong = document.getElementById('weddingSong');
+            const scrollBtn = document.getElementById('scroll-btn');
+
+            musicButton.addEventListener('click', function() {
+                if (weddingSong.paused) {
+                    weddingSong.play().catch(error => { 
+                        console.error("Error al intentar reproducir el audio: ", error);
+                    });
+                    musicButton.classList.add('playing');
+                    musicButton.innerHTML = '<i class="fas fa-pause"></i>';
+                } else {
+                    weddingSong.pause();
+                    musicButton.classList.remove('playing');
+                    musicButton.innerHTML = '<i class="fas fa-music"></i>';
+                }
+            });
+
+            musicButton.innerHTML = '<i class="fas fa-music"></i>';
+
+            scrollBtn.addEventListener('click', function() {
+                document.querySelector('.seccion-bienvenida').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+
+            // FECHA ACTUALIZADA: 19 de Diciembre de 2025
+            const fechaBoda = new Date("December 19, 2025 19:30:00").getTime(); 
+
+            function actualizarCountdown() {
+                const ahora = new Date().getTime();
+                const diferencia = fechaBoda - ahora;
+                
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+                if (diferencia < 0) {
+                    clearInterval(intervalo);
+                    document.getElementById('countdown').innerHTML = "<div class='text-2xl p-4 text-marsala font-bold font-display'>¡EL GRAN DÍA ES HOY!</div>";
+                } else {
+                    document.getElementById('days').innerHTML = String(dias).padStart(2, '0') + "<span class='block text-marsala text-lg font-normal mt-2'>Días</span>";
+                    document.getElementById('hours').innerHTML = String(horas).padStart(2, '0') + "<span class='block text-marsala text-lg font-normal mt-2'>Horas</span>";
+                    document.getElementById('minutes').innerHTML = String(minutos).padStart(2, '0') + "<span class='block text-marsala text-lg font-normal mt-2'>Minutos</span>";
+                    document.getElementById('seconds').innerHTML = String(segundos).padStart(2, '0') + "<span class='block text-marsala text-lg font-normal mt-2'>Segundos</span>";
+                }
+            }
+
+            actualizarCountdown();
+            const intervalo = setInterval(actualizarCountdown, 1000);
+        });
+    </script>
+</body>
+</html>
